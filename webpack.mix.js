@@ -18,17 +18,18 @@ if (mix.inProduction()) {
   mix.webpackConfig({
     plugins: [
       new PurgecssPlugin({
-
         // Specify the locations of any files you want to scan for class names.
         paths: glob.sync([
-          path.join(__dirname, "public/**/*.html")
+          path.join(__dirname, "public/**/*.html"),
+          path.join(__dirname, "public/**/*.php"),
+          path.join(__dirname, "public/**/*.js")
         ]),
         extractors: [
           {
             extractor: TailwindExtractor,
 
             // Specify the file extensions to include when scanning for class names.
-            extensions: ["html", "js", "php"]
+            extensions: ['html', 'js', 'php']
           }
         ]
       })
