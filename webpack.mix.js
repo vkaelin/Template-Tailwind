@@ -12,7 +12,11 @@ class TailwindExtractor {
 mix.postCss('src/css/main.css', 'public/css', [
   tailwindcss('./tailwind.js'),
 ])
-.combine(['src/js/app.js'], 'public/js/app.js');
+.combine(['src/js/app.js'], 'public/js/app.js')
+.copy('src/img/', 'public/img', false)
+.options({
+  processCssUrls: false
+});
 
 if (mix.inProduction()) {
   mix.webpackConfig({
