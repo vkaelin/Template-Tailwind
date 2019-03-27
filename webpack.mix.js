@@ -10,7 +10,7 @@ class TailwindExtractor {
 }
 
 mix.postCss('src/css/main.css', 'public/css', [
-  tailwindcss('./tailwind.js'),
+  require('tailwindcss'),
 ])
 .combine(['src/js/app.js'], 'public/js/app.js')
 .copy('src/img/', 'public/img', false)

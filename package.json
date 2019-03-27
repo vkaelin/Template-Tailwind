@@ -19,6 +19,6 @@
     "glob-all": "^3.1.0",
     "laravel-mix": "^4.0.14",
     "purgecss-webpack-plugin": "^1.4.0",
-    "tailwindcss": "^0.7.3"
+    "tailwindcss": "^1.0.0-beta.3"
   }
 }
